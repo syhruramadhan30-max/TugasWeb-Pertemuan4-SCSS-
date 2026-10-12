@@ -1,0 +1,60 @@
+
+@use "../abstracts/variables" as vars;
+
+#about {
+  background: vars.$white-color;
+
+  > p {
+    max-width: 800px;
+    color: vars.$muted-color;
+    margin-bottom: 15px;
+  }
+
+  h3 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 21px;
+  }
+}
+
+table {
+  width: 100%;
+  max-width: 850px;
+  border-collapse: collapse;
+  background: vars.$white-color;
+  border: 1px solid vars.$border-color;
+  border-radius: vars.$border-radius;
+  overflow: hidden;
+
+  th,
+  td {
+    padding: 15px 18px;
+    border: 1px solid vars.$border-color;
+    text-align: left;
+  }
+
+  th {
+    width: 30%;
+    background: #f8fafc;
+    color: #334155;
+  }
+
+  td {
+    color: vars.$muted-color;
+  }
+
+  tr:hover {
+    td {
+      background: #f8fbff;
+    }
+  }
+}
+
+#education {
+  background: #f8fafc;
+
+  table {
+    box-shadow: 0 15px 40px rgba(15, 23, 42, 0.05);
+  }
+}
+                                                                                                                                                                                                                                                                                                

@@ -1,0 +1,1042 @@
+/* ========================================
+   PORTFOLIO - SYAHRU RAMADHAN NASUTION
+   CSS ONLY - NO JAVASCRIPT
+======================================== */
+
+
+/* ================================
+   RESET
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #172033;
+    line-height: 1.7;
+}
+
+
+/* ================================
+   GENERAL
+================================ */
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+a:hover {
+    color: #1d4ed8;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: #e2e8f0;
+    margin: 0;
+}
+
+main {
+    max-width: 1150px;
+    margin: auto;
+}
+
+section {
+    padding: 90px 30px;
+}
+
+section h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #111827;
+}
+
+section h3 {
+    color: #1e293b;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    text-align: center;
+    padding: 30px 20px 0;
+}
+
+header h1 {
+    font-size: 34px;
+    color: #111827;
+    margin-bottom: 5px;
+}
+
+header > p {
+    color: #64748b;
+    font-size: 15px;
+    margin-bottom: 25px;
+}
+
+
+/* ================================
+   NAVIGATION
+================================ */
+
+nav {
+    padding: 18px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+nav a {
+    color: #475569;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 14px;
+    border-radius: 8px;
+}
+
+nav a:hover {
+    color: #2563eb;
+    background: #eff6ff;
+}
+
+
+/* ================================
+   HOME
+================================ */
+
+#home {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(37, 99, 235, 0.12),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #f5f9ff 100%
+        );
+
+    border-radius: 0 0 30px 30px;
+}
+
+
+/* Layout teks + foto */
+
+.home-content {
+    width: 100%;
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 0.8fr;
+
+    align-items: center;
+
+    gap: 50px;
+}
+
+
+/* Bagian teks */
+
+.home-text {
+    max-width: 700px;
+}
+
+
+/* Judul kecil */
+
+#home h2 {
+    font-size: 18px;
+    color: #2563eb;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+
+/* Nama */
+
+#home h3 {
+    font-size: clamp(42px, 7vw, 75px);
+
+    line-height: 1.05;
+
+    max-width: 800px;
+
+    color: #111827;
+
+    margin-bottom: 25px;
+}
+
+
+/* Paragraf */
+
+#home p {
+    max-width: 700px;
+
+    color: #64748b;
+
+    font-size: 17px;
+
+    margin-bottom: 12px;
+}
+
+#home p:last-child {
+    margin-top: 20px;
+}
+
+
+/* Tombol */
+
+#home p:last-child a {
+    display: inline-block;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 13px 22px;
+
+    border-radius: 10px;
+
+    font-weight: 600;
+
+    box-shadow:
+        0 10px 25px rgba(37, 99, 235, 0.18);
+
+    transition: 0.3s ease;
+}
+
+#home p:last-child a:hover {
+    background: #1d4ed8;
+
+    transform: translateY(-3px);
+}
+
+
+/* ================================
+   FOTO PROFIL
+================================ */
+
+
+/* Tempat keseluruhan foto */
+
+.profile-container {
+    width: 370px;
+    height: 450px;
+
+    position: relative;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    margin: 0 auto;
+}
+
+
+/* Bentuk dekorasi di belakang foto */
+
+.profile-decoration {
+    position: absolute;
+
+    width: 310px;
+    height: 400px;
+
+    background: #2563eb;
+
+    border-radius: 30px;
+
+    transform: rotate(7deg);
+
+    opacity: 0.12;
+
+    right: 20px;
+    top: 20px;
+
+    z-index: 1;
+}
+
+
+/* Frame foto */
+
+.profile-photo {
+    position: relative;
+
+    width: 300px;
+    height: 390px;
+
+    padding: 8px;
+
+    background: #ffffff;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 45px rgba(15, 23, 42, 0.18);
+
+    z-index: 2;
+}
+
+
+/* Foto */
+
+.profile-photo img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    /*
+       Pengaturan posisi foto.
+
+       center center = tengah
+       center 35%   = wajah lebih ke atas
+       center 60%   = wajah lebih ke bawah
+    */
+
+    object-position: center center;
+
+    border-radius: 21px;
+
+    background: #e2e8f0;
+}
+
+
+/* ================================
+   LABEL FOTO
+================================ */
+
+.profile-label {
+    position: absolute;
+
+    left: 10px;
+    bottom: 25px;
+
+    z-index: 3;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    padding: 12px 17px;
+
+    border-left: 4px solid #2563eb;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, 0.12);
+}
+
+
+/* Nama */
+
+.profile-label strong {
+    display: block;
+
+    color: #1e40af;
+
+    font-size: 14px;
+
+    letter-spacing: 1px;
+}
+
+
+/* Keterangan */
+
+.profile-label span {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 10px;
+
+    margin-top: 2px;
+}
+
+
+/* ================================
+   ABOUT
+================================ */
+
+#about {
+    background: #ffffff;
+}
+
+#about > p {
+    max-width: 800px;
+    color: #64748b;
+    margin-bottom: 15px;
+}
+
+#about h3 {
+    margin-top: 35px;
+    margin-bottom: 15px;
+    font-size: 21px;
+}
+
+
+/* ================================
+   TABLE
+================================ */
+
+table {
+    width: 100%;
+    max-width: 850px;
+
+    border-collapse: collapse;
+
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 12px;
+
+    overflow: hidden;
+}
+
+th,
+td {
+    padding: 15px 18px;
+
+    border: 1px solid #e2e8f0;
+
+    text-align: left;
+}
+
+th {
+    width: 30%;
+
+    background: #f8fafc;
+
+    color: #334155;
+}
+
+td {
+    color: #64748b;
+}
+
+tr:hover td {
+    background: #f8fbff;
+}
+
+
+/* ================================
+   EDUCATION
+================================ */
+
+#education {
+    background: #f8fafc;
+}
+
+#education table {
+    box-shadow:
+        0 15px 40px rgba(15, 23, 42, 0.05);
+}
+
+
+/* ================================
+   EXPERIENCE
+================================ */
+
+#experience {
+    background: #ffffff;
+}
+
+#experience article {
+    position: relative;
+
+    background: #f8fafc;
+
+    padding: 25px 30px;
+
+    margin-bottom: 20px;
+
+    border-left: 4px solid #2563eb;
+
+    border-radius: 0 14px 14px 0;
+
+    transition: 0.3s ease;
+}
+
+#experience article:hover {
+    transform: translateX(7px);
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.07);
+}
+
+#experience article h3 {
+    font-size: 20px;
+
+    margin-bottom: 7px;
+}
+
+#experience article p {
+    color: #64748b;
+}
+
+
+/* ================================
+   SKILLS
+================================ */
+
+#skills {
+    background: #f8fafc;
+}
+
+#skills h3 {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+#skills ul {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    list-style: none;
+}
+
+#skills li {
+    background: #ffffff;
+
+    border: 1px solid #dbe4ef;
+
+    padding: 10px 17px;
+
+    border-radius: 30px;
+
+    color: #334155;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+#skills li:hover {
+    background: #eff6ff;
+
+    color: #2563eb;
+
+    border-color: #bfdbfe;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   PROJECT
+================================ */
+
+#project {
+    background: #ffffff;
+}
+
+#project article {
+    display: inline-block;
+
+    vertical-align: top;
+
+    width: calc(50% - 12px);
+
+    min-height: 210px;
+
+    margin-bottom: 20px;
+
+    margin-right: 16px;
+
+    padding: 30px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 18px;
+
+    transition: 0.3s ease;
+}
+
+#project article:nth-of-type(even) {
+    margin-right: 0;
+}
+
+#project article:hover {
+    transform: translateY(-7px);
+
+    border-color: #bfdbfe;
+
+    box-shadow:
+        0 15px 40px rgba(37, 99, 235, 0.08);
+}
+
+#project article h3 {
+    color: #2563eb;
+
+    font-size: 20px;
+
+    margin-bottom: 12px;
+}
+
+#project article p {
+    color: #64748b;
+}
+
+
+/* ================================
+   ACHIEVEMENT
+================================ */
+
+#achievement {
+    background:
+        linear-gradient(
+            135deg,
+            #172554,
+            #1e40af
+        );
+
+    color: white;
+}
+
+#achievement h2 {
+    color: white;
+}
+
+#achievement ol {
+    padding-left: 25px;
+}
+
+#achievement li {
+    margin-bottom: 15px;
+
+    padding-left: 8px;
+
+    color: #dbeafe;
+
+    font-size: 16px;
+}
+
+
+/* ================================
+   INTEREST
+================================ */
+
+#interest {
+    background: #f8fafc;
+}
+
+#interest ul {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    list-style: none;
+}
+
+#interest li {
+    background: white;
+
+    border: 1px solid #e2e8f0;
+
+    padding: 12px 20px;
+
+    border-radius: 12px;
+
+    font-weight: 600;
+
+    color: #334155;
+
+    transition: 0.3s;
+}
+
+#interest li:hover {
+    color: #2563eb;
+
+    border-color: #bfdbfe;
+}
+
+
+/* ================================
+   MOTTO
+================================ */
+
+#achievement + hr + section {
+    background: white;
+
+    text-align: center;
+}
+
+blockquote {
+    max-width: 750px;
+
+    margin: 30px auto 0;
+
+    padding: 30px;
+
+    background: #eff6ff;
+
+    border-left: 5px solid #2563eb;
+
+    border-radius: 12px;
+
+    color: #1e40af;
+
+    font-size: 20px;
+
+    font-weight: 600;
+}
+
+
+/* ================================
+   CONTACT
+================================ */
+
+#contact {
+    background: #f8fafc;
+
+    text-align: center;
+}
+
+#contact p {
+    max-width: 650px;
+
+    margin: 0 auto 25px;
+
+    color: #64748b;
+}
+
+#contact ul {
+    list-style: none;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+#contact li {
+    background: white;
+
+    padding: 13px 20px;
+
+    border: 1px solid #e2e8f0;
+
+    border-radius: 10px;
+
+    color: #475569;
+}
+
+#contact li a {
+    font-weight: 600;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    background: #0f172a;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+}
+
+footer p {
+    color: #94a3b8;
+
+    font-size: 13px;
+
+    margin-bottom: 5px;
+}
+
+
+/* ================================
+   RESPONSIVE TABLET
+================================ */
+
+@media (max-width: 800px) {
+
+    section {
+        padding: 70px 22px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    nav {
+        gap: 2px;
+    }
+
+    nav a {
+        font-size: 13px;
+
+        padding: 8px 9px;
+    }
+
+
+    /* HOME */
+
+    #home {
+        min-height: 550px;
+    }
+
+    .home-content {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        gap: 30px;
+    }
+
+    .home-text {
+        margin: auto;
+    }
+
+    #home h3 {
+        font-size: 48px;
+    }
+
+
+    /* FOTO */
+
+    .profile-container {
+        width: 330px;
+
+        height: 410px;
+
+        margin-top: 20px;
+    }
+
+    .profile-photo {
+        width: 270px;
+
+        height: 350px;
+    }
+
+    .profile-decoration {
+        width: 285px;
+
+        height: 360px;
+
+        right: 12px;
+
+        top: 15px;
+    }
+
+
+    /* PROJECT */
+
+    #project article {
+        width: 100%;
+
+        margin-right: 0;
+    }
+
+}
+
+
+/* ================================
+   RESPONSIVE MOBILE
+================================ */
+
+@media (max-width: 500px) {
+
+    section {
+        padding: 60px 18px;
+    }
+
+    header {
+        padding: 25px 15px 0;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    header > p {
+        font-size: 13px;
+    }
+
+
+    /* NAVIGATION */
+
+    nav {
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 5px;
+    }
+
+    nav a {
+        background: #f8fafc;
+
+        text-align: center;
+    }
+
+
+    /* HOME */
+
+    #home {
+        min-height: 500px;
+
+        padding: 60px 20px;
+    }
+
+    #home h3 {
+        font-size: 40px;
+    }
+
+    #home p {
+        font-size: 15px;
+    }
+
+
+    /* FOTO */
+
+    .profile-container {
+        width: 300px;
+
+        height: 380px;
+
+        margin-top: 20px;
+    }
+
+    .profile-photo {
+        width: 245px;
+
+        height: 320px;
+
+        border-radius: 24px;
+    }
+
+    .profile-photo img {
+        border-radius: 18px;
+    }
+
+    .profile-decoration {
+        width: 260px;
+
+        height: 330px;
+
+        right: 8px;
+
+        top: 15px;
+    }
+
+    .profile-label {
+        left: 2px;
+
+        bottom: 18px;
+
+        padding: 10px 14px;
+    }
+
+    .profile-label strong {
+        font-size: 13px;
+    }
+
+    .profile-label span {
+        font-size: 9px;
+    }
+
+
+    /* GENERAL */
+
+    section h2 {
+        font-size: 30px;
+    }
+
+    table {
+        font-size: 13px;
+    }
+
+    th,
+    td {
+        padding: 11px;
+    }
+
+    th {
+        width: 35%;
+    }
+
+
+    /* EXPERIENCE */
+
+    #experience article {
+        padding: 20px;
+    }
+
+
+    /* PROJECT */
+
+    #project article {
+        padding: 23px;
+
+        min-height: auto;
+    }
+
+
+    /* CONTACT */
+
+    #contact ul {
+        flex-direction: column;
+    }
+
+    #contact li {
+        width: 100%;
+    }
+
+
+    /* MOTTO */
+
+    blockquote {
+        font-size: 17px;
+
+        padding: 22px;
+    }
+
+}

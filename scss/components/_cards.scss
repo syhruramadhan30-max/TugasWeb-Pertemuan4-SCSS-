@@ -1,0 +1,22 @@
+
+@use "../abstracts/variables" as vars;
+@use "../abstracts/mixins" as mix;
+
+.card {
+  background-color: vars.$white-color;
+  border: 1px solid vars.$border-color;
+  border-radius: vars.$border-radius;
+  padding: 20px;
+  transition: vars.$transition-speed;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.1);
+  }
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}

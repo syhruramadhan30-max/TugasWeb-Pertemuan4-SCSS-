@@ -1,0 +1,43 @@
+
+@use "../abstracts/variables" as vars;
+
+header {
+  background: vars.$white-color;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: center;
+  padding: 30px 20px 0;
+
+  h1 {
+    font-size: 34px;
+    color: vars.$heading-color;
+    margin-bottom: 5px;
+  }
+
+  > p {
+    color: vars.$muted-color;
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+}
+
+nav {
+  padding: 18px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  a {
+    color: #475569;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 9px 14px;
+    border-radius: 8px;
+
+    &:hover {
+      color: vars.$primary-color;
+      background: #eff6ff;
+    }
+  }
+}

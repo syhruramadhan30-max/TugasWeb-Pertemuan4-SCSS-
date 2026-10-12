@@ -1,0 +1,37 @@
+
+@use "../abstracts/variables" as vars;
+
+#contact {
+  background: #f8fafc;
+
+  p {
+    color: vars.$muted-color;
+    margin-bottom: 12px;
+  }
+
+  a {
+    color: vars.$primary-color;
+    font-weight: 600;
+
+    &:hover {
+      color: vars.$primary-hover;
+    }
+  }
+}
+
+#achievement + hr + section {
+  background: vars.$white-color;
+  text-align: center;
+
+  blockquote {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 25px 30px;
+    border-left: 4px solid vars.$primary-color;
+    border-radius: 0 12px 12px 0;
+    background: #f8fafc;
+    color: #334155;
+    font-size: 18px;
+    font-style: italic;
+  }
+}
